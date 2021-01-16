@@ -720,14 +720,15 @@ export default function Posts() {
           return (
             <li>
               <h3>
-                <Link href={`/posts/${post.id}`}>{post.title}</Link>
+                <Link href="/posts/[id]" as={`/posts/${post.id}`}>
+                  <a>{post.title}</a>
+                </Link>
               </h3>
               <p>{post.body}</p>
             </li>
           );
         })}
       </ul>
-      <p>This is posts page</p>
     </div>
   );
 }
